@@ -1,6 +1,6 @@
-# Shelfwise Admin
+# Back Office
 
-A commerce admin built with **Next.js 14 (App Router)**, **React 18** and **TypeScript**. It manages products, categories and discount campaigns through a REST API with a layered architecture, runtime validation and a typed client.
+A commerce admin built with **Next.js 14 (App Router)**, **React 18** and **TypeScript**. It manages products, categories and discount campaigns through a REST API with a layered architecture, runtime validation, and server components.
 
 The goal of this repo is architecture, not feature count: each domain has one complete slice you can read top to bottom.
 
