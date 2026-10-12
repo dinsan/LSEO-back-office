@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   BarChart3,
-  FileText,
   Download,
   Upload,
   Settings,
@@ -20,7 +19,7 @@ import {
   Menu,
   X,
 } from "lucide-react";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const mainLinks = [
   { href: "/", label: "Overview", icon: Grid3x3, badge: null },
@@ -49,7 +48,7 @@ interface NavItemProps {
   isActive: boolean;
 }
 
-function NavItem({ href, label, icon: Icon, badge, isActive }: NavItemProps) {
+function NavItem({ href, label, icon: Icon, badge, isActive }: Readonly<NavItemProps>) {
   return (
     <Link
       href={href}
@@ -76,11 +75,16 @@ function NavSection({
   title,
   links,
   pathname,
-}: {
-  title: string;
-  links: Array<{ href: string; label: string; icon: React.ComponentType<{ className?: string }>; badge?: number | null }>;
-  pathname: string;
-}) {
+}: Readonly<{
+    title: string;
+    links: Array<{
+        href: string;
+        label: string;
+        icon: React.ComponentType<{ className?: string }>;
+        badge?: number | null
+    }>;
+    pathname: string;
+}>) {
   return (
     <div>
       <h3 className="mb-3 px-3 text-xs font-semibold uppercase tracking-widest text-white/50">
