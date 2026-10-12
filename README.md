@@ -90,6 +90,11 @@ curl -X POST localhost:3000/api/categories \
   -d '{"name":"Mice","description":"Wireless and wired"}'
 ```
 
+## UI of this app
+<img width="1660" height="963" alt="Screen1" src="https://github.com/user-attachments/assets/7a674743-ee8c-4d9c-89bc-0eea0ee6a4c8" />
+<img width="1646" height="965" alt="Screen2" src="https://github.com/user-attachments/assets/e7c04217-cce9-4ee1-9e3d-eb4ae357bc29" />
+
+
 ## Scope
 
 Built in full: products CRUD (API + UI), categories CRUD (API; list, create and delete in the UI), campaigns (create, list, delete).
@@ -101,3 +106,5 @@ Good next steps:
 - [ ] Campaign edit and pause, with price calculation for storefronts
 - [ ] Optimistic updates on delete
 - [ ] Playwright end-to-end tests
+
+
